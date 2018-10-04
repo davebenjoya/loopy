@@ -1,0 +1,262 @@
+html {
+  background-color: rgb(36, 48, 7);
+}
+button {
+  border-radius: 6px;
+  padding: 0.25em 1em 0em;
+  vertical-align: -webkit-baseline-middle;
+  background-color:  rgb(239, 220, 167);
+  color: black;
+  border-color:  rgb(97, 138, 182);
+  margin-right: 1em;
+  margin-bottom: .5em;
+  width:  40%;
+
+  font-weight: 400;
+  font-family: 'Bangers', sans-serif;
+}
+
+.openspan {
+  width: 100%;
+  position: relative;
+}
+.openbtn {
+  right: 0px;
+  transform-origin: 50% 50%;
+  animation: openbutton .3s ease-out;
+
+  animation-direction: reverse;
+  
+}
+
+
+@keyframes openbutton {
+  from {
+    transform:rotate(0deg);
+      }
+  to {
+    transform:rotate(90deg);
+      }
+  }
+ 
+.closebtn {
+  transform:rotate(90deg);
+  animation: closebutton .3s ease-out;
+  animation-direction: reverse;
+}
+
+  @keyframes closebutton {
+    from {
+      transform:rotate(90deg);
+        }
+    to {
+      transform:rotate(0deg);
+        }
+    }
+  
+
+.hide {
+  visibility: collapse;
+  height:0px;
+}
+
+.show {
+  visibility: visible;
+  height:auto;
+}
+
+
+.librarydiv {
+  /* height: max-content; */
+  border: 3px solid rgb(97, 138, 182);
+  border-radius: 6px;
+}
+
+.seqdiv {
+  height: max-content;
+  padding: 0px;
+  /* border: 3px solid black; */
+  /* background-color: rgb(97, 138, 182); */
+  border: 3px solid rgb(97, 138, 182);
+  border-radius: 6px;
+  clear: both;
+}
+
+.trashdiv {
+  height: 120px;
+}
+
+.libraryhead {
+  color: rgb(97, 138, 182);
+  /* font-family: 'Do Hyeon', sans-serif; */
+  font-family: 'Slabo 27px', serif;
+  font-size: 28px;
+  margin: 9px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: left;
+  width: 100%;
+}
+
+.seqhead {
+  text-align: left;
+  color: blanchedalmond;
+}
+
+.fade {
+  opacity: .3;
+  font-size: 15px;
+}
+
+.loophead {
+  display: -webkit-flex; /* Safari */
+  -webkit-justify-content: space-around; /* Safari 6.1+ */
+  display: flex;
+  justify-content: space-around; 
+width: 100%;
+  font-size: 19px;
+  margin-bottom: 4px;
+}
+
+  .loop {
+  font-weight: 100;
+  font-family: 'Archivo Narrow', sans-serif;
+  padding: 4px;
+  width: 146px;  
+  height: auto;
+  border: 1px solid rgb(28, 29, 70);
+  border-radius: 6px;
+  /* float: left; */
+  font-size: 15px;
+  background-color:rgb(73, 93, 103);
+  color:  rgb(214, 204, 125);
+  -webkit-box-shadow: 4px 3px 3px 1px rgba(0,0,0,0.4);
+  -moz-box-shadow: 4px 3px 3px 1px rgba(0,0,0,0.4);
+  box-shadow: 3px 3px 0px 0px rgba(9, 21, 50, 0.4);
+}
+
+.draggable-item {
+  /* font-family: 'Noto Serif', serif; */
+  margin: 3px;
+  padding: 4px;
+  /* width: 160px;  */
+  /* height: 160px; */
+  /* float: left; */
+
+}
+
+
+.instrument {
+  font-size: 15; 
+  color: rgb(223, 203, 86);
+  margin-left: 6px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 200;
+}
+
+
+.stepinstrument {
+  font-size: 15; 
+  color: rgb(81, 203, 240);
+  margin-left: 6px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 200;
+  
+}
+
+.step {
+  margin: 0px;
+  padding: 6px;
+  /* width: 160px;
+  height: 160px; */
+  background-color: rgb(169, 176, 36);
+  font-weight: 100;
+  font-family: 'Archivo Narrow', sans-serif;
+  border-radius: 8px;
+  border: 1px solid rgb(45, 1, 203);
+  border-right: 1px solid rgb(9, 0, 40);
+  border-bottom: 1px solid rgb(11, 0, 50);
+
+  -webkit-box-shadow: 3px 3px 0px 0px rgba(9, 21, 50, 0.3);
+-moz-box-shadow: 3px 3px 0px 0px rgba(9, 21, 50, 0.3);
+box-shadow: 3px 3px 0px 0px rgba(9, 21, 50, 0.3);
+  
+}
+
+.stepcurrent {
+
+  background-color: rgb(232, 240, 67);
+}
+
+.container-drag {
+
+
+  border: 2px solid  rgb(97, 138, 182);
+  border-radius: 6px;
+  
+
+}
+audio {
+  width: 360px;
+}
+
+
+.muted {
+  opacity: .3;
+  animation-name: fadeToMute;
+  animation-duration: .4s;
+} 
+.unmuted {
+  /* opacity: 1; */
+  /* color:rgb(17, 141, 17); */
+  animation-name: fadeToUnmute;
+  animation-duration: .8s;
+}
+
+
+
+@keyframes fadeToMute {
+  from {
+      opacity: 1.0;
+      }
+  to {
+      opacity: .3;
+      }
+  }
+  
+@keyframes fadeToUnmute {
+  from {
+      opacity: .3;
+      }
+  to {
+      opacity: 1.0;
+      }
+}
+@keyframes fadeToHide {
+  from {
+      opacity: 1.0;
+      }
+  to {
+      opacity: 0;
+      }
+  to {
+      height: 0px;
+  }
+}
+      
+@keyframes fadeToShow {
+  from {
+      opacity: .0;
+  }
+  to { 
+      height: auto;
+  }
+  to {
+      opacity: 1.0;
+  }
+}
+      
